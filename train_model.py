@@ -63,4 +63,4 @@ for i, label in enumerate(le.classes_):
 # Zapisz model
 os.makedirs("model", exist_ok=True)
 joblib.dump({"model": model, "le": le, "scaler": scaler}, "model/voice_model.pkl")
-print("\n✓ Model saved to model/voice_model.pkl")
+print("\nModel saved to model/voice_model.pkl")

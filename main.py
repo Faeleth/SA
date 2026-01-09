@@ -99,7 +99,7 @@ def game_over_screen():
 
 # --- glowna petla gry ---
 print("=" * 50)
-print("🎤 Snake Game - Voice Control")
+print("Snake Game - Voice Control")
 print("=" * 50)
 print("Commands: gora (UP), dol (DOWN), lewo (LEFT), prawo (RIGHT)")
 print("Calibrating microphone...\n")
@@ -183,4 +183,4 @@ while running:
     clock.tick(FPS)
 
 pygame.quit()
-print("Goodbye!")
+print("Shutdown!")
