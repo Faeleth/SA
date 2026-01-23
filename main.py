@@ -88,7 +88,6 @@ def game_over_screen():
     
     pygame.display.flip()
     
-    # Wait for restart or timeout
     start_time = time.time()
     while time.time() - start_time < 3:
         if command_buffer == "gora":

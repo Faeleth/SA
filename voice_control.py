@@ -32,7 +32,6 @@ audio_buffer = deque(maxlen=SUSTAIN_FRAMES)
 
 # --- adaptacyjny prog ciszy ---
 def estimate_noise_level(duration=1.0):
-    """Oszacuj poziom szumu tla"""
     print("Calibrating... (stay quiet)")
     noise = sd.rec(int(duration * FS), samplerate=FS, channels=1, dtype='float32')
     sd.wait()
@@ -69,10 +68,6 @@ def extract_features_from_audio(audio, sr):
 
 # --- glowna funkcja nasluchu ---
 def listen_command():
-    """
-    Nasluchuj komendy glosowej i zwroc rozpoznana komende.
-    Zwrot: str (nazwa komendy) albo None
-    """
     if SILENCE_THRESHOLD is None:
         set_silence_threshold()
     
